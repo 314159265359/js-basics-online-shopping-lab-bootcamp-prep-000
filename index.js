@@ -48,12 +48,15 @@ function removeFromCart(item) {
   for (var ind in cart){
     var test = Object.keys(cart[ind])
     var comp = test.toString()
-    if (cart.hasOwnProperty(item) && comp === item){
+    //console.log(test)
+    //console.log(comp)
+    //  console.log(item)
+    if (comp == item){
     cart.splice(ind,1)}
     return cart
   }
-      console.log("That item is not in your cart.")
-      return(cart)
+  console.log("That item is not in your cart.")
+  return cart
 }
 
 function placeOrder(cardNumber) {
