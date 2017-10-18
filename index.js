@@ -47,7 +47,7 @@ function total() {
 function removeFromCart(item) {
   for (var key in cart) {
     if (cart.hasOwnProperty(key)) {
-        if (cart[key] === null || isEmpty(cart[key])){
+        if (cart[key] === null){
           console.log("That item is not in your cart.")
           return cart
         }
