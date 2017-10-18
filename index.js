@@ -46,9 +46,9 @@ function total() {
 
 function removeFromCart(item) {
   for (var ind in cart) {
-        //var item = Object.keys(cart[ind])
+        var toGo = Object.keys(cart[ind])
         //var value = item.map(e => cart[ind][e])
-        if (cart.hasOwnProperty(ind) && cart[ind] === item){
+        if (cart.hasOwnProperty(ind) && toGo === item){
             cart.splice(ind,1)
             return(cart)
             break
