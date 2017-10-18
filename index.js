@@ -49,7 +49,7 @@ function removeFromCart(item) {
         //var item = Object.keys(cart[ind])
         //var value = item.map(e => cart[ind][e])
         if (cart.hasOwnProperty(ind) && cart[ind] === item){
-            delete cart[ind]
+            cart.splice(ind,1)
             return(cart)
             break
         }
