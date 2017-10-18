@@ -48,9 +48,6 @@ function removeFromCart(item) {
   for (var ind in cart){
     var test = Object.keys(cart[ind])
     var comp = test.toString()
-    //console.log(test)
-    //console.log(comp)
-    //  console.log(item)
     if (comp == item){
     cart.splice(ind,1)}
     return cart
