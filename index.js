@@ -45,14 +45,18 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for (var ind in cart){
-    var test = Object.keys(cart[ind])
-    var comp = test.toString()
-    if (comp == item){
-    cart.splice(ind,1)}
-    return cart
-  }
+  let itemInCart = false;
+  for (let i = 0, l = cart.length; i < l; i++) {
+    if (cart[i].hasOwnProperty(item)) {
+      itemInCart = true;
+      cart = cart.slice(0, i).concat(cart.slice(i + 1));
+      l--;
+      }
+    }
+
+  if(!itemInCart){
   console.log("That item is not in your cart.")
+  }
   return cart
 }
 
