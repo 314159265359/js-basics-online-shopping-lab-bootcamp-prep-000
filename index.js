@@ -45,12 +45,9 @@ function total() {
 }
 
 function removeFromCart(item) {
-  //var test = ['tilapia']
   for (var ind in cart){
     var test = Object.keys(cart[ind])
     if (test.toString() == item){
-    //console.log(item)
-    //console.log(item.toString())
     cart.splice(ind,1)}
     return cart
   }
