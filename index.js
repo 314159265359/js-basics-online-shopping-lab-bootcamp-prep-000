@@ -48,7 +48,7 @@ function removeFromCart(item) {
   for (var ind in cart){
     var test = Object.keys(cart[ind])
     var comp = test.toString()
-    if (comp === item){
+    if (cart.hasOwnProperty(item) && comp === item){
     cart.splice(ind,1)}
     return cart
   }
