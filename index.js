@@ -48,7 +48,7 @@ function removeFromCart(item) {
   for (var ind in cart) {
         var toGo = Object.keys(cart[ind])
         if(toGo === item){
-          cart.splice(ind,1)
+          delete cart[ind]
           return(cart)
           break
         }
