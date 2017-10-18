@@ -45,10 +45,18 @@ function total() {
 }
 
 function removeFromCart(item) {
-  if (Object.hasOwnProperty(cart.item)){
-    delete cart.item
-    return cart
-  }
+  for (var key in cart) {
+    if (cart.hasOwnProperty(key)) {
+        if (object[key] === null || isEmpty(object[key])){
+          console.log("That item is not in your cart.")
+          return cart
+        }
+        if (cart[key] === item){
+            delete cart[key]
+            return cart
+          }
+    }
+}
 }
 
 function placeOrder(cardNumber) {
