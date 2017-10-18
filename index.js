@@ -48,11 +48,13 @@ function removeFromCart(item) {
   for (var ind in cart) {
         var toGo = Object.keys(cart[ind])
         //var value = item.map(e => cart[ind][e])
-        if (toGo === item){
+        if (cart.hasOwnProperty(ind)){
+          if(toGo === item){
           cart.splice(ind,1)
           return(cart)
           break
         }
+      }
   }
       console.log("That item is not in your cart.")
       return(cart)
