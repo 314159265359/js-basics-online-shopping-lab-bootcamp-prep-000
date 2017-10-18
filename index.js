@@ -45,15 +45,17 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for (var key in cart) {
-    if (cart.hasOwnProperty(key)) {
-      if (cart[key] === item){
-      delete cart[key]
-      return cart
-    }
-    }else console.log("That item is not in your cart.")
-    return cart
+  for (var ind in cart) {
+        //var item = Object.keys(cart[ind])
+        //var value = item.map(e => cart[ind][e])
+        if (cart.hasOwnProperty(ind) && cart[ind] === item){
+            delete cart[ind]
+            return(cart)
+            break
+        }
   }
+      console.log("That item is not in your cart.")
+      return(cart)
 }
 
 function placeOrder(cardNumber) {
