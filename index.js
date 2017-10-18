@@ -47,7 +47,8 @@ function total() {
 function removeFromCart(item) {
   for (var ind in cart){
     var test = Object.keys(cart[ind])
-    if (test.toString() == item){
+    var comp = test.toString()
+    if (comp == item){
     cart.splice(ind,1)}
     return cart
   }
