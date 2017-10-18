@@ -45,11 +45,14 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for (var ind in cart) {
-    if (cart[ind] === cart[item]){
-      delete cart[item]
-      return(cart)
-    }
+  //var test = ['tilapia']
+  for (var ind in cart){
+    var test = Object.keys(cart[ind])
+    if (test.toString() == item){
+    //console.log(item)
+    //console.log(item.toString())
+    cart.splice(ind,1)}
+    return cart
   }
       console.log("That item is not in your cart.")
       return(cart)
