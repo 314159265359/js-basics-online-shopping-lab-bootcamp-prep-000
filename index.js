@@ -49,7 +49,6 @@ function removeFromCart(item) {
     if (cart[ind] === item){
       delete cart[item]
       return(cart)
-      //break
     }
   }
       console.log("That item is not in your cart.")
