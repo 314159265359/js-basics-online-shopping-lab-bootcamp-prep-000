@@ -50,8 +50,8 @@ function removeFromCart(item) {
       delete cart[item]
       return(cart)
       //break
-    }
-  }
+    //}
+  //}
       console.log("That item is not in your cart.")
       return(cart)
 }
